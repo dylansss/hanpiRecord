@@ -6,7 +6,7 @@
 
 mounted() {
 this.bodyHeight = document.documentElement.clientHeight
-var timer = null
+let timer = null
 document.body.addEventListener('focusin', (e) => { // 软键盘弹起事件
 if (timer && e.target.type !== 'button') {
 clearTimeout(timer)
@@ -19,7 +19,6 @@ timer = setTimeout(() => {
 clearTimeout(timer)
 timer = null
 const nowH = document.documentElement.clientHeight
-console.log('timeout', nowH, this.bodyHeight)
 if (nowH < this.bodyHeight) {
 const oinput = document.createElement('input')
 oinput.style.width = '0px'
