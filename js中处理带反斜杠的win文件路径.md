@@ -9,3 +9,12 @@ raw后可以跟`${methodName()}`
 2. 方法2
 const path = require('path')
 const str3 = str.split(path.delimiter)
+3. 方法3
+const path = require('path');
+
+const filePath = 'C:\\Users\\dylan\\AppData\\Local\\Temp\\tmp-18160wzgHtfAikpSu.png';
+
+// 使用path.basename获取文件名
+const fileName = path.basename(filePath);
+
+console.log(fileName);
